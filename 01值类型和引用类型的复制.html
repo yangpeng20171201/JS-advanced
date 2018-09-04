@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>值类型和引用类型的复制</title>
+</head>
+
+<body>
+    <script>
+        var a = 9,
+            b;
+
+        var c = {
+                age: 9
+            },
+            d;
+        //把a值类型赋值给了b
+        b = a;
+        b = 19; //修改了b的值
+        console.log(a); //a=>9
+        console.log(b); //b=>19
+
+        //如果是引用类型的赋值后操作
+        d = c; //把c的值赋给了d
+        d.age = 22; //修改了d变量额age属性为22 
+
+        //d和c的值全部改变
+        console.log(c);
+        console.log(d);
+
+        c.age = 99;
+        //它们的值都为99
+        console.log(c);
+        console.log(d);
+    </script>
+</body>
+
+</html>
